@@ -1,0 +1,47 @@
+{
+  "name": "dsh-coding-discipline",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Always-on coding discipline for DeepSeek Harness: verification closure, a constraint ledger, smallest-diff edits, hypothesis-first debugging, a bundled coding-discipline skill, and an effect dashboard.",
+  "license": "MIT",
+  "author": "junzhaoyin",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "src",
+    "scripts",
+    "cordis.patch.yml",
+    "SKILL.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "coding-agent",
+    "verification",
+    "prompt-engineering",
+    "dashboard"
+  ],
+  "engines": {
+    "dsh": "^0.2.0-rc.1 || ^0.2.1-rc.1 || ^0.2.2-alpha.2",
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "dashboard": "node scripts/dashboard.mjs",
+    "prepublishOnly": "node --test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

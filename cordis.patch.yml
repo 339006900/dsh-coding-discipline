@@ -1,0 +1,25 @@
+# dsh-coding-discipline bundle for DeepSeek Harness (dsh).
+#
+# Installed into the profile's composition (`plugin_manager` install_bundle with
+# this directory, or a `link:` dependency plus an entry in
+# package.json -> dsh.profile.bundles). There is no client half: the plugin
+# registers a system-prompt section, an optional bundled skill, and an HTTP
+# dashboard route.
+#
+# `enabled: false` removes every contribution without uninstalling anything.
+# `order` places the section before the runtime-context suffix (10000+); lower
+# means earlier in the prompt, so it stays close to the end of the instructions.
+- insert:
+    - id: coding-discipline
+      name: 'dsh-coding-discipline'
+      config:
+        enabled: true
+        order: 9500
+        extraRules: ''
+        skill: true
+        # Serve the effect dashboard on the host web server:
+        # http://127.0.0.1:<dsh-port>/coding-discipline
+        dashboard: true
+        # '' = ~/.dsh/sessions. Point it at one workspace's session directory
+        # to measure that project alone.
+        sessionsRoot: ''
