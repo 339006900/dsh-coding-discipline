@@ -5,6 +5,14 @@
   "description": "Always-on coding discipline for DeepSeek Harness: verification closure, a constraint ledger, smallest-diff edits, hypothesis-first debugging, a bundled coding-discipline skill, and an effect dashboard.",
   "license": "MIT",
   "author": "junzhaoyin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/339006900/dsh-coding-discipline.git"
+  },
+  "homepage": "https://github.com/339006900/dsh-coding-discipline#readme",
+  "bugs": {
+    "url": "https://github.com/339006900/dsh-coding-discipline/issues"
+  },
   "main": "src/index.js",
   "exports": {
     ".": "./src/index.js",
